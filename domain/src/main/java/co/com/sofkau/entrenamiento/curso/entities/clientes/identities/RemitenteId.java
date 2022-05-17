@@ -1,4 +1,4 @@
-package co.com.sofkau.entrenamiento.curso.entities;
+package co.com.sofkau.entrenamiento.curso.entities.clientes.identities;
 
 import co.com.sofka.domain.generic.Identity;
 
