@@ -6,18 +6,15 @@ import co.com.sofkau.entrenamiento.curso.entities.envios.values.Ubicacion;
 
 public class EnvioLocalizado extends DomainEvent {
     private final Ubicacion ubicacion;
-    private final EnviosId enviosId;
-    public EnvioLocalizado(Ubicacion ubicacion, EnviosId enviosId) {
+    public EnvioLocalizado(Ubicacion ubicacion) {
         super("co.com.sofkau.entrenamiento.curso.entities.EnvioLocalizado");
         this.ubicacion = ubicacion;
-        this.enviosId = enviosId;
+
     }
 
     public Ubicacion getUbicacion() {
         return ubicacion;
     }
 
-    public EnviosId getEnviosId() {
-        return enviosId;
-    }
+
 }
