@@ -1,5 +1,6 @@
-package co.com.sofkau.entrenamiento.curso.entities.envios;
+package co.com.sofkau.entrenamiento.curso.entities.envios.factory;
 
+import co.com.sofkau.entrenamiento.curso.entities.envios.Envios;
 import co.com.sofkau.entrenamiento.curso.entities.envios.entities.Factura;
 import co.com.sofkau.entrenamiento.curso.entities.envios.entities.Ruta;
 import co.com.sofkau.entrenamiento.curso.entities.envios.identities.EnviosId;

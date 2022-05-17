@@ -1,4 +1,4 @@
-package co.com.sofkau.entrenamiento.curso.entities.envios;
+package co.com.sofkau.entrenamiento.curso.entities.envios.commands;
 
 import co.com.sofka.domain.generic.Command;
 import co.com.sofkau.entrenamiento.curso.entities.envios.identities.FacturaId;
