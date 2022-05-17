@@ -7,12 +7,12 @@ import co.com.sofkau.entrenamiento.curso.entities.envios.values.*;
 import java.io.Serializable;
 import java.util.List;
 
-public class crearFacturaCommand extends Command {
+public class generarFacturaCommand extends Command {
     private final List<TuplaFactura> tuplaFactura;
     private final FacturaId facturaId;
 
 
-    public crearFacturaCommand(List<TuplaFactura> tuplaFactura, FacturaId facturaId) {
+    public generarFacturaCommand(List<TuplaFactura> tuplaFactura, FacturaId facturaId) {
         this.tuplaFactura = tuplaFactura;
         this.facturaId = facturaId;
     }
