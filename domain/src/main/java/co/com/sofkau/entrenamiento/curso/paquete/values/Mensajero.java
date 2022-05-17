@@ -1,11 +1,11 @@
-package co.com.sofkau.entrenamiento.curso.entities.values;
+package Values;
 
 import co.com.sofka.domain.generic.ValueObject;
 
-public class Documento implements ValueObject<String> {
+public class Mensajero  implements ValueObject<String> {
     private final String value;
 
-    public Documento(String value) {
+    public Mensajero(String value) {
         this.value = value;
     }
 
