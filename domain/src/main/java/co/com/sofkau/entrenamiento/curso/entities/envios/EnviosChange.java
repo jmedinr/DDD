@@ -1,6 +1,8 @@
 package co.com.sofkau.entrenamiento.curso.entities.envios;
 
 import co.com.sofka.domain.generic.EventChange;
+
+import co.com.sofkau.entrenamiento.curso.entities.envios.events.facturaGenerada;
 import co.com.sofkau.entrenamiento.curso.entities.envios.events.CambioEstado;
 import co.com.sofkau.entrenamiento.curso.entities.envios.events.EnvioLocalizado;
 import co.com.sofkau.entrenamiento.curso.entities.envios.events.EnvioRecibido;
@@ -14,7 +16,6 @@ public class EnviosChange extends EventChange {
 
         apply((facturaGeneradaEvents event) -> {
             envios.estado=new Estado(Estado.Estados.ENPROCESO);
-
         });
 
         apply((EnvioLocalizado event)->{
