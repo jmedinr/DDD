@@ -1,4 +1,4 @@
-package co.com.sofkau.entrenamiento.values;
+package co.com.sofkau.entrenamiento.curso.entities.values;
 
 import co.com.sofka.domain.generic.ValueObject;
 

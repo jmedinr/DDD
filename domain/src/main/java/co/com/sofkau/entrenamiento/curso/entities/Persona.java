@@ -1,12 +1,11 @@
-package co.com.sofkau.entrenamiento.entities;
+package co.com.sofkau.entrenamiento.curso.entities;
 
 import co.com.sofka.domain.generic.Entity;
-import co.com.sofkau.entrenamiento.PersonaId;
-import co.com.sofkau.entrenamiento.values.Telefono;
-import co.com.sofkau.entrenamiento.values.Correo;
-import co.com.sofkau.entrenamiento.values.Direccion;
-import co.com.sofkau.entrenamiento.values.Documento;
-import co.com.sofkau.entrenamiento.values.Nombre;
+import co.com.sofkau.entrenamiento.curso.entities.values.Telefono;
+import co.com.sofkau.entrenamiento.curso.entities.values.Correo;
+import co.com.sofkau.entrenamiento.curso.entities.values.Direccion;
+import co.com.sofkau.entrenamiento.curso.entities.values.Documento;
+import co.com.sofkau.entrenamiento.curso.entities.values.Nombre;
 
 import java.util.Objects;
 
