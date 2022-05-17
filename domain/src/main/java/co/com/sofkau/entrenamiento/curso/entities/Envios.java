@@ -8,14 +8,14 @@ import co.com.sofkau.entrenamiento.curso.entities.values.Nombre;
 
 public class Envios extends AggregateEvent<EnviosId> {
 
-    protected Nombre nombre;
+    protected Nombre nombreEnvio;
     protected Descripcion descripcion;
     protected Fecha fecha;
-    protected Persona remitente;
-    protected Persona destinatario;
+    protected Estado estado;
     protected Ruta ruta;
-    protected Documento documento;
     protected Factura factura;
+    protected IdPaquete idPaquete;
+    protected IdCLiente idCLiente;
 
     public Envios(EnviosId entityId) {
         super(entityId);
