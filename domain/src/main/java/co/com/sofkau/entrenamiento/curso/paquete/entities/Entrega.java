@@ -7,14 +7,14 @@ import co.com.sofka.domain.generic.Entity;
 
 public class IEntrega  extends Entity<EntregaID> {
 
-    protected TipoEntrega tipoEntrega;
-    protected Peso peso;
-    protected ValorAsegurado valorAsegurado;
+    protected Values.TipoEntrega tipoEntrega;
+    protected Values.Peso peso;
+    protected Values.ValorAsegurado valorAsegurado;
     public IEntrega(EntregaID entityId) {
         super(entityId);
     }
 
-    public TipoEntrega getTipoEntrega() {
+    public Values.TipoEntrega getTipoEntrega() {
         return tipoEntrega;
     }
 
