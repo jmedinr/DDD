@@ -5,7 +5,15 @@ import co.com.sofkau.entrenamiento.curso.entities.clientes.identities.Destinatar
 import co.com.sofkau.entrenamiento.curso.entities.clientes.value.Email;
 import co.com.sofkau.entrenamiento.curso.entities.clientes.value.Nombre;
 import co.com.sofkau.entrenamiento.curso.entities.clientes.value.Telefono;
-
+/**
+ * Entidad Destinatario
+ * Se hacen metodos  de consultar, modificar y eliminar
+ *
+ * @Version 1.0
+ * @Author Jhon Stiven Granada Acevedo
+ * @Email ticen17.jsga@gmail.com
+ * *
+ */
 
 public class Destinatario extends Entity<DestinatarioID> {
 

@@ -4,7 +4,15 @@ import co.com.sofka.domain.generic.DomainEvent;
 import co.com.sofkau.entrenamiento.curso.entities.clientes.value.Email;
 import co.com.sofkau.entrenamiento.curso.entities.clientes.value.Nombre;
 import co.com.sofkau.entrenamiento.curso.entities.clientes.value.Telefono;
-
+/**
+ * Evento RemitenteAgregado
+ * Se hacen metodos  get de cada atributo heredado
+ *
+ * @Version 1.0
+ * @Author Jhon Stiven Granada Acevedo
+ * @Email ticen17.jsga@gmail.com
+ * *
+ */
 public class RemitenteAgregado extends DomainEvent {
     private Nombre nombre;
     private Telefono telefono;

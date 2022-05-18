@@ -10,7 +10,15 @@ import co.com.sofkau.entrenamiento.curso.entities.clientes.value.Email;
 import co.com.sofkau.entrenamiento.curso.entities.clientes.value.Nombre;
 import co.com.sofkau.entrenamiento.curso.entities.clientes.value.Telefono;
 
-
+/**
+ * Agregado ROOT Clientes
+ * Se hacen metodos   principales del agregado para comunicacion con  sus entidades
+ *
+ * @Version 1.0
+ * @Author Jhon Stiven Granada Acevedo
+ * @Email ticen17.jsga@gmail.com
+ * *
+ */
 public class Clientes extends AggregateEvent<ClienteId> {
      protected Remitente remitente;
      protected Destinatario destinatario;
