@@ -2,13 +2,19 @@ package co.com.sofkau.entrenamiento.curso.paquete;
 
 
 import co.com.sofka.domain.generic.AggregateEvent;
+import co.com.sofka.domain.generic.DomainEvent;
+import co.com.sofkau.entrenamiento.curso.envios.Envios;
 import co.com.sofkau.entrenamiento.curso.envios.identities.EnviosId;
 import co.com.sofkau.entrenamiento.curso.paquete.commands.CrearPaquete;
+import co.com.sofkau.entrenamiento.curso.paquete.events.PaqueteCreado;
 import co.com.sofkau.entrenamiento.curso.paquete.identities.PaqueteID;
 import co.com.sofkau.entrenamiento.curso.paquete.values.Descripcion;
 import co.com.sofkau.entrenamiento.curso.paquete.values.Entrega;
 import co.com.sofkau.entrenamiento.curso.paquete.values.Mensajero;
 import co.com.sofkau.entrenamiento.curso.paquete.values.Nombre;
+
+import java.util.List;
+
 
 public class Paquete extends AggregateEvent<PaqueteID> {
     protected EnviosId enviosId;
@@ -16,37 +22,51 @@ public class Paquete extends AggregateEvent<PaqueteID> {
     protected Entrega entrega;
 
     protected Nombre nombre;
-
     protected Descripcion descripcion;
 
-    public Paquete(PaqueteID entityId, EnviosId enviosId, Mensajero mensajero, Entrega entrega) {
+    public Paquete(PaqueteID entityId, EnviosId enviosId, Mensajero mensajero,
+                   Entrega entrega, Nombre nombre, Descripcion descripcion) {
         super(entityId);
-        this.mensajero = mensajero;
-        this.entrega = entrega;
-        appendChange(new CrearPaquete(entityId,enviosId,mensajero,entrega)).apply();
+
+        appendChange(new PaqueteCreado(mensajero, entrega, enviosId, nombre, descripcion)).apply();
+        subscribe(new PaqueteEventChange(this));
     }
 
-    public Paquete(PaqueteID entityId) {
-        super(entityId);
+
+    public static Paquete from(PaqueteID entityId, List<DomainEvent> events) {
+        var paquet = new Paquete(entityId);
+        events.forEach(paquet::applyEvent);
+        return paquet;
+    }
+
+
+    public EnviosId getEnviosId() {
+        return enviosId;
     }
 
     public Mensajero getMensajero() {
         return mensajero;
     }
 
-    public void setMensajero(Mensajero mensajero) {
-        this.mensajero = mensajero;
-    }
-
     public Entrega getEntrega() {
         return entrega;
     }
 
-    public void setEntrega(Entrega entrega) {
-        this.entrega = entrega;
+    public Nombre getNombre() {
+        return nombre;
     }
 
-    public void crearPaquete(Nombre nombre, Descripcion descripcion, Mensajero mensajero, Entrega entrega) {
+    public Descripcion getDescripcion() {
+        return descripcion;
+    }
+
+    public Paquete(PaqueteID entityId) {
+        super(entityId);
+    }
+
+
+    public void crearPaquete(Mensajero mensajero, Entrega entrega, EnviosId enviosId, Nombre nombre, Descripcion descripcion) {
+        appendChange(new PaqueteCreado(mensajero, entrega, enviosId, nombre, descripcion)).apply();
 
     }
 }

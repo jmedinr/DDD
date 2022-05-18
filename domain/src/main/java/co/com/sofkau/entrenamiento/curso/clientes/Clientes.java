@@ -1,6 +1,7 @@
 package co.com.sofkau.entrenamiento.curso.clientes;
 
 import co.com.sofka.domain.generic.AggregateEvent;
+import co.com.sofka.domain.generic.DomainEvent;
 import co.com.sofkau.entrenamiento.curso.clientes.entities.Destinatario;
 import co.com.sofkau.entrenamiento.curso.clientes.entities.Remitente;
 import co.com.sofkau.entrenamiento.curso.clientes.events.ClienteCreado;
@@ -12,6 +13,7 @@ import co.com.sofkau.entrenamiento.curso.clientes.identities.RemitenteId;
 import co.com.sofkau.entrenamiento.curso.envios.identities.EnviosId;
 import co.com.sofkau.entrenamiento.curso.paquete.identities.PaqueteID;
 
+import java.util.List;
 import java.util.Map;
 
 public class Clientes extends AggregateEvent<ClienteId> {
@@ -30,6 +32,13 @@ public class Clientes extends AggregateEvent<ClienteId> {
                 .personas()
                 .forEach(persona -> agregarCliente(persona.identity(), persona.getRemitente(), persona.getDestinatario()));
 
+    }
+
+
+    public static Clientes from(ClienteId entityId, List<DomainEvent> events) {
+        var Cliente = new Clientes(entityId);
+        events.forEach(Cliente::applyEvent);
+        return Cliente;
     }
 
     public void agregarCliente(PersonaId personaId, Remitente remitente, Destinatario destinatario) {
