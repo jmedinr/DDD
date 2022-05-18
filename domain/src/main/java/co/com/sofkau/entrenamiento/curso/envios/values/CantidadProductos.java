@@ -8,7 +8,8 @@ public class CantidadProductos implements ValueObject<Integer> {
     private final Integer cantidad;
 
     public CantidadProductos(Integer cantidad) {
-        this.cantidad = cantidad;
+        this.cantidad = Objects.requireNonNull(cantidad, "CANTIDAD PRODUCTOS");
+
     }
 
     @Override
