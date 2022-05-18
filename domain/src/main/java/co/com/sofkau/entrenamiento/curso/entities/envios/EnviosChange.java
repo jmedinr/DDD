@@ -15,7 +15,7 @@ public class EnviosChange extends EventChange {
     public EnviosChange(Envios envios){
 
         apply((facturaGeneradaEvents event) -> {
-            envios.estado=new Estado(Estado.Estados.ENPROCESO);
+
         });
 
         apply((EnvioLocalizado event)->{
@@ -25,7 +25,7 @@ public class EnviosChange extends EventChange {
         });
 
         apply((EnvioRecibido event)->{
-
+            envios.estado=new Estado(Estado.Estados.ENPROCESO);
         });
 
         apply((RutaAgregada event)->{

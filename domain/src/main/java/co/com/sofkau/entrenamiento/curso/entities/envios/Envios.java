@@ -29,6 +29,7 @@ public class Envios extends AggregateEvent<EnviosId> {
                   Fecha fecha, Estado estado, Ruta ruta, Factura factura) {
         super(entityId);
         appendChange(new Enviado(entityId, nombreEnvio, descripcion)).apply();
+        subscribe(new EnviosChange(this));
         
     }
 
