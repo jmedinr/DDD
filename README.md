@@ -45,7 +45,8 @@ Duvan Arley  Botero Rivillas
 ![ori](https://user-images.githubusercontent.com/96325513/169109297-0c768d98-13ef-43cb-9ef5-5aced1393d3b.jpeg)
 
 
-
+# Link video explicacion dominio
+https://drive.google.com/file/d/1BPwasqWlIWyUpvJUiubqFZ1pDKeJDtRV/view
 
 
 
