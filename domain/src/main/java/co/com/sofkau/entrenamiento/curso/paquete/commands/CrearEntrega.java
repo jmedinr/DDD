@@ -6,7 +6,14 @@ import co.com.sofkau.entrenamiento.curso.paquete.identities.PaqueteID;
 import co.com.sofkau.entrenamiento.curso.paquete.values.Peso;
 import co.com.sofkau.entrenamiento.curso.paquete.values.TipoEntrega;
 import co.com.sofkau.entrenamiento.curso.paquete.values.ValorAsegurado;
-
+/**
+ *
+ * comando CrearEntrega
+ * @Version 1.0
+ * @Author Duvan Botero
+ * @Email duvanarleybotero@gmail.com
+ * *
+ */
 public class CrearEntrega extends Command {
     private final PaqueteID paqueteID;
     private final TipoEntrega tipoEntrega;

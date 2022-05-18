@@ -7,6 +7,15 @@ import co.com.sofkau.entrenamiento.curso.paquete.values.Entrega;
 import co.com.sofkau.entrenamiento.curso.paquete.values.Mensajero;
 import co.com.sofkau.entrenamiento.curso.paquete.values.Nombre;
 
+/**
+ *
+ * comando CrearPaquete
+ * @Version 1.0
+ * @Author Duvan Botero
+ * @Email duvanarleybotero@gmail.com
+ * *
+ */
+
 public class CrearPaquete extends Command {
 
 

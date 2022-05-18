@@ -1,12 +1,21 @@
 package co.com.sofkau.entrenamiento.curso.paquete.entities;
 
 import co.com.sofka.domain.generic.Entity;
+import co.com.sofkau.entrenamiento.curso.envios.identities.EnviosId;
+import co.com.sofkau.entrenamiento.curso.paquete.events.PaqueteCreado;
 import co.com.sofkau.entrenamiento.curso.paquete.identities.EntregaID;
-import co.com.sofkau.entrenamiento.curso.paquete.values.Peso;
-import co.com.sofkau.entrenamiento.curso.paquete.values.TipoEntrega;
-import co.com.sofkau.entrenamiento.curso.paquete.values.ValorAsegurado;
+import co.com.sofkau.entrenamiento.curso.paquete.values.*;
+import co.com.sofkau.entrenamiento.curso.paquete.values.Mensajero;
 
-
+/**
+ * Entidad Entrega
+ * Se hacen metodos get  de todos sus atributos y metodo crearEntrega
+ *
+ * @Version 1.0
+ * @Author Duvan Botero
+ * @Email duvanarleybotero@gmail.com
+ * *
+ */
 public class Entrega  extends Entity<EntregaID> {
 
     protected TipoEntrega tipoEntrega;
@@ -45,3 +54,4 @@ public class Entrega  extends Entity<EntregaID> {
 
     }
 }
+
