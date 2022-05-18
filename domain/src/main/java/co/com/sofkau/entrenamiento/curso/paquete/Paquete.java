@@ -1,9 +1,11 @@
-package co.com.sofkau.entrenamiento.curso.paquete.entities;
+package co.com.sofkau.entrenamiento.curso.paquete;
 
 
 import co.com.sofka.domain.generic.AggregateEvent;
 import co.com.sofkau.entrenamiento.curso.paquete.identities.PaqueteID;
 import co.com.sofkau.entrenamiento.curso.paquete.values.Descripcion;
+import co.com.sofkau.entrenamiento.curso.paquete.values.Entrega;
+import co.com.sofkau.entrenamiento.curso.paquete.values.Mensajero;
 import co.com.sofkau.entrenamiento.curso.paquete.values.Nombre;
 
 public class Paquete extends AggregateEvent<PaqueteID> {
