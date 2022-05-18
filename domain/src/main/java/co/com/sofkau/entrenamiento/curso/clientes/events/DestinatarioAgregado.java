@@ -7,7 +7,6 @@ import co.com.sofkau.entrenamiento.curso.clientes.value.Nombre;
 import co.com.sofkau.entrenamiento.curso.clientes.value.Telefono;
 
 
-
 public class DestinatarioAgregado extends DomainEvent {
     private DestinatarioID destinatarioID;
     private Nombre nombre;
@@ -15,14 +14,14 @@ public class DestinatarioAgregado extends DomainEvent {
     private Email email;
 
 
-
-    public DestinatarioAgregado(DestinatarioID destinatarioID, Nombre nombre, Telefono telefono, Email email ) {
+    public DestinatarioAgregado(DestinatarioID destinatarioID, Nombre nombre, Telefono telefono, Email email) {
         super("co.com.sofkau.entrenamiento.DestinatarioAgregado");
         this.nombre = nombre;
         this.email = email;
         this.telefono = telefono;
         this.destinatarioID = destinatarioID;
     }
+
     public Nombre getNombre() {
         return nombre;
     }
@@ -34,6 +33,7 @@ public class DestinatarioAgregado extends DomainEvent {
     public Email getEmail() {
         return email;
     }
+
     public DestinatarioID getDestinatarioID() {
         return destinatarioID;
     }

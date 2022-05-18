@@ -12,6 +12,7 @@ public class Destinatario extends Entity<DestinatarioID> {
     private Nombre nombre;
     private Telefono telefono;
     private Email email;
+
     public Destinatario(DestinatarioID entityId, Nombre nombre, Telefono telefono, Email email) {
         super(entityId);
         this.nombre = nombre;
@@ -23,20 +24,27 @@ public class Destinatario extends Entity<DestinatarioID> {
         super(entityId);
     }
 
-    public void consultarNombre(){
+    public void consultarNombre() {
 
     }
-    public void consultarTelefono(){
 
-    } public void consultarEmail(){
-
-    }
-    public void modificarDestinatario(){
+    public void consultarTelefono() {
 
     }
-    public void eliminarDestinatario(){
 
-    } public void consultarDestinatario(){
+    public void consultarEmail() {
+
+    }
+
+    public void modificarDestinatario() {
+
+    }
+
+    public void eliminarDestinatario() {
+
+    }
+
+    public void consultarDestinatario() {
 
     }
 }

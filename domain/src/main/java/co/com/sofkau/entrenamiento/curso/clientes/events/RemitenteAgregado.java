@@ -23,6 +23,7 @@ public class RemitenteAgregado extends DomainEvent {
         this.telefono = telefono;
         this.remitenteId = remitenteId;
     }
+
     public Nombre getNombre() {
         return nombre;
     }
