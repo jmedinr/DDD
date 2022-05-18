@@ -5,7 +5,14 @@ import co.com.sofkau.entrenamiento.curso.clientes.identities.ClienteId;
 import co.com.sofkau.entrenamiento.curso.clientes.value.Email;
 import co.com.sofkau.entrenamiento.curso.clientes.value.Nombre;
 import co.com.sofkau.entrenamiento.curso.clientes.value.Telefono;
-
+/**
+ * Comando  AgregarRemitente
+ *
+ * @Version 1.0
+ * @Author Jhon Stiven Granada Acevedo
+ * @Email ticen17.jsga@gmail.com
+ * *
+ */
 public class AgregarRemitente extends Command {
     private ClienteId clienteId;
     private Nombre nombre;
