@@ -7,6 +7,10 @@ import co.com.sofkau.entrenamiento.curso.paquete.identities.PaqueteID;
 import co.com.sofkau.entrenamiento.curso.paquete.values.Entrega;
 
 public class EnvioRecibido extends DomainEvent {
+
+    public EnvioRecibido() {
+        super("co.com.sofkau.entrenamiento.curso.entities.EnvioRecibido");
+
     private final PaqueteID paqueteID;
     private final Nombre nombre;
     private final Descripcion descripcion;

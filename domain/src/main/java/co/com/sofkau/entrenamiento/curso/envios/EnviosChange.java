@@ -2,17 +2,20 @@ package co.com.sofkau.entrenamiento.curso.envios;
 
 import co.com.sofka.domain.generic.EventChange;
 
-import co.com.sofkau.entrenamiento.curso.envios.events.CambioEstado;
-import co.com.sofkau.entrenamiento.curso.envios.events.EnvioLocalizado;
-import co.com.sofkau.entrenamiento.curso.envios.events.EnvioRecibido;
-import co.com.sofkau.entrenamiento.curso.envios.events.RutaAgregada;
+import co.com.sofkau.entrenamiento.curso.envios.entities.Factura;
+import co.com.sofkau.entrenamiento.curso.envios.events.*;
 import co.com.sofkau.entrenamiento.curso.envios.values.Estado;
 
 public class EnviosChange extends EventChange {
     public EnviosChange(Envios envios){
 
-        apply((facturaGeneradaEvents event) -> {
-            envios.estado=new Estado(Estado.Estados.ENPROCESO);
+        apply((FacturaGenerada event) -> {
+            var facturaId=event.getFacturaId();
+            var factura=new Factura(facturaId,event.getNombre(),
+                    event.getFecha(),event.getValorTotal(),event.getCantidadProductos(),event.getDatosEmpresa());
+            envios.factura=factura;
+
+
         });
 
         apply((EnvioLocalizado event)->{
@@ -22,7 +25,7 @@ public class EnviosChange extends EventChange {
         });
 
         apply((EnvioRecibido event)->{
-
+            envios.estado=new Estado(Estado.Estados.ENTREGADO);
         });
 
         apply((RutaAgregada event)->{
