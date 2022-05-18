@@ -5,7 +5,15 @@ import co.com.sofkau.entrenamiento.curso.clientes.identities.DestinatarioID;
 import co.com.sofkau.entrenamiento.curso.clientes.value.Email;
 import co.com.sofkau.entrenamiento.curso.clientes.value.Nombre;
 import co.com.sofkau.entrenamiento.curso.clientes.value.Telefono;
-
+/**
+ * Evento DestinatarioAgregado
+ * Se hacen metodos  get de cada atributo heredado
+ *
+ * @Version 1.0
+ * @Author Jhon Stiven Granada Acevedo
+ * @Email ticen17.jsga@gmail.com
+ * *
+ */
 
 public class DestinatarioAgregado extends DomainEvent {
     private DestinatarioID destinatarioID;
