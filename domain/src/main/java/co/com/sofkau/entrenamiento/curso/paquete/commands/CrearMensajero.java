@@ -5,6 +5,15 @@ import co.com.sofkau.entrenamiento.curso.paquete.identities.PaqueteID;
 import co.com.sofkau.entrenamiento.curso.paquete.values.Nombre;
 import co.com.sofkau.entrenamiento.curso.paquete.values.Telefono;
 
+/**
+ *
+ * comando CrearMensajero
+ * @Version 1.0
+ * @Author Duvan Botero
+ * @Email duvanarleybotero@gmail.com
+ * *
+ */
+
 public class CrearMensajero extends Command {
     private final PaqueteID paqueteID;
     private  final Nombre nombre;

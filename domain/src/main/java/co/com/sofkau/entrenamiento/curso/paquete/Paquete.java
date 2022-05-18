@@ -1,11 +1,8 @@
 package co.com.sofkau.entrenamiento.curso.paquete;
 
-
 import co.com.sofka.domain.generic.AggregateEvent;
 import co.com.sofka.domain.generic.DomainEvent;
-import co.com.sofkau.entrenamiento.curso.envios.Envios;
 import co.com.sofkau.entrenamiento.curso.envios.identities.EnviosId;
-import co.com.sofkau.entrenamiento.curso.paquete.commands.CrearPaquete;
 import co.com.sofkau.entrenamiento.curso.paquete.events.PaqueteCreado;
 import co.com.sofkau.entrenamiento.curso.paquete.identities.PaqueteID;
 import co.com.sofkau.entrenamiento.curso.paquete.values.Descripcion;
@@ -15,7 +12,15 @@ import co.com.sofkau.entrenamiento.curso.paquete.values.Nombre;
 
 import java.util.List;
 
-
+/**
+ * Agregado  paquete
+ * Se hacen metodos get y set de todos sus atributos y metodo crear paquete
+ *
+ * @Version 1.0
+ * @Author Duvan Botero
+ * @Email duvanarleybotero@gmail.com
+ * *
+ */
 public class Paquete extends AggregateEvent<PaqueteID> {
     protected EnviosId enviosId;
     protected Mensajero mensajero;
