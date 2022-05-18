@@ -5,7 +5,15 @@ import co.com.sofkau.entrenamiento.curso.envios.identities.FacturaId;
 import co.com.sofkau.entrenamiento.curso.envios.values.*;
 
 import java.util.Set;
-
+/**
+ * Representa la entidad factura.
+ *
+ * @version 1.0.0 2022-05-18.
+ *
+ * @author Juan Diego Medina <juandiego619@gmail.com>, Luis Felipe Rivas <luisfelorivas@gmai.com>
+ *
+ * @since 1.0.0 2022-05-18.
+ */
 public class Factura extends Entity<FacturaId> {
 
     private final Nombre nombre;

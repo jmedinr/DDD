@@ -6,7 +6,15 @@ import co.com.sofkau.entrenamiento.curso.envios.values.*;
 
 import java.io.Serializable;
 import java.util.List;
-
+/**
+ * Representa el comando que genera la factura del envio.
+ *
+ * @version 1.0.0 2022-05-18.
+ *
+ * @author Juan Diego Medina <juandiego619@gmail.com>, Luis Felipe Rivas <luisfelorivas@gmai.com>
+ *
+ * @since 1.0.0 2022-05-18.
+ */
 public class GenerarFactura extends Command {
     private final List<TuplaFactura> tuplaFactura;
     private final FacturaId facturaId;
