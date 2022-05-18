@@ -2,18 +2,17 @@ package co.com.sofkau.entrenamiento.curso.envios.commands;
 
 import co.com.sofka.domain.generic.Command;
 import co.com.sofkau.entrenamiento.curso.envios.identities.FacturaId;
-import co.com.sofkau.entrenamiento.curso.entities.envios.values.*;
 import co.com.sofkau.entrenamiento.curso.envios.values.*;
 
 import java.io.Serializable;
 import java.util.List;
 
-public class generarFacturaCommand extends Command {
+public class GenerarFactura extends Command {
     private final List<TuplaFactura> tuplaFactura;
     private final FacturaId facturaId;
 
 
-    public generarFacturaCommand(List<TuplaFactura> tuplaFactura, FacturaId facturaId) {
+    public GenerarFactura(List<TuplaFactura> tuplaFactura, FacturaId facturaId) {
         this.tuplaFactura = tuplaFactura;
         this.facturaId = facturaId;
     }

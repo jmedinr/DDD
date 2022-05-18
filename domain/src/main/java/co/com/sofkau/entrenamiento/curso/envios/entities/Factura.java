@@ -2,7 +2,6 @@ package co.com.sofkau.entrenamiento.curso.envios.entities;
 
 import co.com.sofka.domain.generic.Entity;
 import co.com.sofkau.entrenamiento.curso.envios.identities.FacturaId;
-import co.com.sofkau.entrenamiento.curso.entities.envios.values.*;
 import co.com.sofkau.entrenamiento.curso.envios.values.*;
 
 import java.util.Set;

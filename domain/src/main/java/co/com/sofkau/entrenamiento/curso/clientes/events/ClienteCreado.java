@@ -8,23 +8,17 @@ import co.com.sofkau.entrenamiento.curso.paquete.identities.PaqueteID;
 public class ClienteCreado extends DomainEvent {
 
     private final EnviosId enviosId;
-    private final PaqueteID paqueteID;
     private final ClienteId clienteId;
 
-    public ClienteCreado(EnviosId enviosId, PaqueteID paqueteID, ClienteId clienteId) {
+    public ClienteCreado(EnviosId enviosId, ClienteId clienteId) {
         super("co.com.sofkau.entrenamiento.ClienteCreado");
         this.enviosId = enviosId;
-        this.paqueteID = paqueteID;
 
         this.clienteId = clienteId;
     }
 
     public EnviosId getEnviosId() {
         return enviosId;
-    }
-
-    public PaqueteID getPaqueteID() {
-        return paqueteID;
     }
 
     public ClienteId getClienteId() {

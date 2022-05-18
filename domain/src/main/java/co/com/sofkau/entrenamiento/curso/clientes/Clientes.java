@@ -14,10 +14,8 @@ import co.com.sofkau.entrenamiento.curso.paquete.identities.PaqueteID;
 
 import java.util.Map;
 
-
 public class Clientes extends AggregateEvent<ClienteId> {
     protected EnviosId enviosId;
-    protected PaqueteID paqueteID;
     protected boolean destinatarioAgregado;
     protected boolean remitenteAgregado;
     protected Map<RemitenteId, Remitente> remitente;
@@ -26,7 +24,7 @@ public class Clientes extends AggregateEvent<ClienteId> {
     public Clientes(ClienteId entityId) {
 
         super(entityId);
-        appendChange(new ClienteCreado(enviosId, paqueteID, entityId)).apply();
+        appendChange(new ClienteCreado(enviosId, entityId)).apply();
         subscribe(new ClienteEventChange(this));
         ClientesFactory.builder()
                 .personas()
