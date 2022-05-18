@@ -9,7 +9,6 @@ import co.com.sofkau.entrenamiento.curso.envios.entities.Ruta;
 import co.com.sofkau.entrenamiento.curso.envios.identities.FacturaId;
 import co.com.sofkau.entrenamiento.curso.envios.values.*;
 import co.com.sofkau.entrenamiento.curso.paquete.identities.PaqueteID;
-import co.com.sofkau.entrenamiento.curso.paquete.values.Entrega;
 
 import java.util.Set;
 
@@ -27,26 +26,16 @@ public class Envios extends AggregateEvent<EnviosId> {
         super(entityId);
     }
 
-    public Envios(EnviosId entityId, Nombre nombreEnvio, Descripcion descripcion,
+    public Envios(EnviosId entityId,PaqueteID idPaquete, ClienteId idCLiente, Nombre nombreEnvio, Descripcion descripcion,
                   Fecha fecha, Estado estado, Ruta ruta, Factura factura) {
         super(entityId);
-        appendChange(new Enviado(entityId, nombreEnvio, descripcion)).apply();
+        appendChange(new Enviado(entityId, idPaquete, idCLiente, nombreEnvio, descripcion)).apply();
         subscribe(new EnviosChange(this));
         
     }
     public void generarFactura(FacturaId entityId, Nombre nombre, Fecha fecha,
                                ValorTotal valorTotal, CantidadProductos cantidadProductos, Set<DatosEmpresa> datosEmpresa){
         appendChange(new FacturaGenerada(entityId,nombre,fecha, valorTotal, cantidadProductos,datosEmpresa)).apply();
-    }
-
-    public void entregarEnvio(){
-
-    public void recibirEnvio(Nombre nombrePaquete, Descripcion descripcionPaquete, Entrega entrega ){
-        PaqueteID idPaquete=new PaqueteID();
-
-
-        appendChange(new EnvioRecibido( )).apply();
-
     }
 
     public void localizarEnvio(Ubicacion ubicacion){
@@ -61,9 +50,39 @@ public class Envios extends AggregateEvent<EnviosId> {
         appendChange(new CambioEstado(estado)).apply();
 
     }
+    public void enviar(EnviosId enviosId, Nombre nombre, Descripcion descripcion){
+        appendChange(new Enviado(enviosId, idPaquete, idCLiente, nombre, descripcion)).apply();
+    }
 
+    public Nombre getNombreEnvio() {
+        return nombreEnvio;
+    }
 
-    public void enviar(Factura factura){
+    public Descripcion getDescripcion() {
+        return descripcion;
+    }
 
+    public Fecha getFecha() {
+        return fecha;
+    }
+
+    public Estado getEstado() {
+        return estado;
+    }
+
+    public Ruta getRuta() {
+        return ruta;
+    }
+
+    public Factura getFactura() {
+        return factura;
+    }
+
+    public PaqueteID getIdPaquete() {
+        return idPaquete;
+    }
+
+    public ClienteId getIdCLiente() {
+        return idCLiente;
     }
 }

@@ -8,7 +8,7 @@ public class RutaAgregada extends DomainEvent {
     private final Origen origen;
     private final Destino destino;
     public RutaAgregada(Origen origen, Destino destino) {
-        super("co.com.sofkau.entrenamiento.curso.entities.RutaAgregada");
+        super("co.com.sofkau.entrenamiento.curso.RutaAgregada");
         this.origen=origen;
         this.destino=destino;
     }
