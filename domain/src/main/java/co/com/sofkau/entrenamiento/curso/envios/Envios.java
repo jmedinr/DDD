@@ -2,15 +2,14 @@ package co.com.sofkau.entrenamiento.curso.envios;
 
 import co.com.sofka.domain.generic.AggregateEvent;
 import co.com.sofkau.entrenamiento.curso.envios.entities.Factura;
-import co.com.sofkau.entrenamiento.curso.envios.events.Enviado;
-import co.com.sofkau.entrenamiento.curso.envios.events.CambioEstado;
-import co.com.sofkau.entrenamiento.curso.envios.events.EnvioLocalizado;
-import co.com.sofkau.entrenamiento.curso.envios.events.EnvioRecibido;
-import co.com.sofkau.entrenamiento.curso.envios.events.RutaAgregada;
+import co.com.sofkau.entrenamiento.curso.envios.events.*;
 import co.com.sofkau.entrenamiento.curso.envios.identities.EnviosId;
 import co.com.sofkau.entrenamiento.curso.entities.envios.values.*;
 import co.com.sofkau.entrenamiento.curso.envios.entities.Ruta;
+import co.com.sofkau.entrenamiento.curso.envios.identities.FacturaId;
 import co.com.sofkau.entrenamiento.curso.envios.values.*;
+
+import java.util.Set;
 
 public class Envios extends AggregateEvent<EnviosId> {
     protected Nombre nombreEnvio;
@@ -32,6 +31,10 @@ public class Envios extends AggregateEvent<EnviosId> {
         appendChange(new Enviado(entityId, nombreEnvio, descripcion)).apply();
         subscribe(new EnviosChange(this));
         
+    }
+    public void generarFactura(FacturaId entityId, Nombre nombre, Fecha fecha,
+                               ValorTotal valorTotal, CantidadProductos cantidadProductos, Set<DatosEmpresa> datosEmpresa){
+        appendChange(new FacturaGenerada(entityId,nombre,fecha, valorTotal, cantidadProductos,datosEmpresa)).apply();
     }
 
     public void entregarEnvio(){
