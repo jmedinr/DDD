@@ -9,8 +9,11 @@ https://app.diagrams.net/#G1lNMCrJet7M07jlhpYzXfuLV8zthqXEjT
 
 ## Integrantes
 Jhon Stiven Granada Acevedo
+
 Juan Diego Medina Rojas
+
 Luis Felipe Rivas Mina
+
 Duvan Arley  Botero Rivillas
 
 
