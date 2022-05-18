@@ -15,6 +15,16 @@ import co.com.sofkau.entrenamiento.curso.paquete.identities.PaqueteID;
 import java.util.List;
 import java.util.Set;
 
+/**
+ * Representa el agregado de envios, que agrupa el paquete y los clientes (destinatario y remitente).
+ *
+ * @version 1.0.0 2022-05-18.
+ *
+ * @author Juan Diego Medina <juandiego619@gmail.com>, Luis Felipe Rivas <luisfelorivas@gmai.com>
+ *
+ * @since 1.0.0 2022-05-18.
+ */
+
 public class Envios extends AggregateEvent<EnviosId> {
     protected Nombre nombreEnvio;
     protected Descripcion descripcion;

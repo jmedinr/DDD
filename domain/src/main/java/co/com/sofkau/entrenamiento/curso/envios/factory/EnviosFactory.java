@@ -13,7 +13,15 @@ import co.com.sofkau.entrenamiento.curso.paquete.identities.PaqueteID;
 
 import java.util.HashSet;
 import java.util.Set;
-
+/**
+ * Representa el factory de envios.
+ *
+ * @version 1.0.0 2022-05-18.
+ *
+ * @author Juan Diego Medina <juandiego619@gmail.com>
+ *
+ * @since 1.0.0 2022-05-18.
+ */
 public class EnviosFactory {
     private static Set<Envios> envios = null;
 
