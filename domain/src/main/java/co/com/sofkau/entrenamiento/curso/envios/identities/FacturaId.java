@@ -7,9 +7,6 @@ public class FacturaId extends Identity {
         super(id);
     }
 
-    public FacturaId() {
-    }
-
     public static FacturaId of(String id) {
         return new FacturaId(id);
     }

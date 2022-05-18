@@ -6,7 +6,7 @@ import co.com.sofkau.entrenamiento.curso.envios.values.Estado;
 public class CambioEstado extends DomainEvent {
     private Estado estado;
     public CambioEstado(Estado estado) {
-        super();
+        super("co.com.sofkau.entrenamiento.CambiaEstado");
         this.estado=estado;
     }
 
