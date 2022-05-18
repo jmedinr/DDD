@@ -19,7 +19,11 @@ Duvan Arley  Botero Rivillas
 ----------------------------------------------------
 ## Dominio
 
+# Analisis del  problema BigPicture
+
 ![2](https://user-images.githubusercontent.com/96325513/169106712-69779095-0e68-4609-a68b-d7ef2906452f.jpeg)
+
+# Contexto y subdominios
 
 ![3](https://user-images.githubusercontent.com/96325513/169106923-ab063e84-cf97-47d0-a16a-eb675c8346a1.jpeg)
 
@@ -31,11 +35,15 @@ Duvan Arley  Botero Rivillas
 
 ---------------------------------------------------------------------------------------------------------
 
+
 ![7](https://user-images.githubusercontent.com/96325513/169107395-3df8de8e-09d9-4b93-8d7b-611b4988932b.jpeg)
+
+# Modelo de dominio con  sus agregados entidadades y objetos de valor
 
 ![8](https://user-images.githubusercontent.com/96325513/169107474-40f794a0-1f7d-4341-91c2-84f6da6c910f.jpeg)
 
-![9](https://user-images.githubusercontent.com/96325513/169107566-d8ce1dae-7d4d-44ba-8f9d-ed19d57dc2cc.jpeg)
+![ori](https://user-images.githubusercontent.com/96325513/169109297-0c768d98-13ef-43cb-9ef5-5aced1393d3b.jpeg)
+
 
 
 
