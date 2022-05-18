@@ -34,10 +34,9 @@ public class Envios extends AggregateEvent<EnviosId> {
         
     }
 
-    public void recibirEnvio(Nombre nombrePaquete, Descripcion descripcionPaquete, Entrega entrega ){
-        IdPaquete idPaquete=new IdPaquete();
+    public void entregarEnvio(){
 
-        appendChange(new EnvioRecibido(idPaquete, nombrePaquete,descripcionPaquete,entrega )).apply();
+        appendChange(new EnvioRecibido( )).apply();
 
     }
 

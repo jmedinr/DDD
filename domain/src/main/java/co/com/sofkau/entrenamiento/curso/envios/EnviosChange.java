@@ -22,7 +22,7 @@ public class EnviosChange extends EventChange {
         });
 
         apply((EnvioRecibido event)->{
-            envios.estado=new Estado(Estado.Estados.ENPROCESO);
+            envios.estado=new Estado(Estado.Estados.ENTREGADO);
         });
 
         apply((RutaAgregada event)->{
