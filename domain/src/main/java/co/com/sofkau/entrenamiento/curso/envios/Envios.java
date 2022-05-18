@@ -1,6 +1,7 @@
 package co.com.sofkau.entrenamiento.curso.envios;
 
 import co.com.sofka.domain.generic.AggregateEvent;
+import co.com.sofkau.entrenamiento.curso.clientes.identities.ClienteId;
 import co.com.sofkau.entrenamiento.curso.envios.entities.Factura;
 import co.com.sofkau.entrenamiento.curso.envios.events.Enviado;
 import co.com.sofkau.entrenamiento.curso.envios.events.CambioEstado;
@@ -8,9 +9,10 @@ import co.com.sofkau.entrenamiento.curso.envios.events.EnvioLocalizado;
 import co.com.sofkau.entrenamiento.curso.envios.events.EnvioRecibido;
 import co.com.sofkau.entrenamiento.curso.envios.events.RutaAgregada;
 import co.com.sofkau.entrenamiento.curso.envios.identities.EnviosId;
-import co.com.sofkau.entrenamiento.curso.entities.envios.values.*;
 import co.com.sofkau.entrenamiento.curso.envios.entities.Ruta;
 import co.com.sofkau.entrenamiento.curso.envios.values.*;
+import co.com.sofkau.entrenamiento.curso.paquete.identities.PaqueteID;
+import co.com.sofkau.entrenamiento.curso.paquete.values.Entrega;
 
 public class Envios extends AggregateEvent<EnviosId> {
     protected Nombre nombreEnvio;
@@ -19,8 +21,8 @@ public class Envios extends AggregateEvent<EnviosId> {
     protected Estado estado;
     protected Ruta ruta;
     protected Factura factura;
-    protected IdPaquete idPaquete;
-    protected IdCLiente idCLiente;
+    protected PaqueteID idPaquete;
+    protected ClienteId idCLiente;
 
     public Envios(EnviosId entityId) {
         super(entityId);
@@ -34,7 +36,7 @@ public class Envios extends AggregateEvent<EnviosId> {
     }
 
     public void recibirEnvio(Nombre nombrePaquete, Descripcion descripcionPaquete, Entrega entrega ){
-        IdPaquete idPaquete=new IdPaquete();
+        PaqueteID idPaquete=new PaqueteID();
 
         appendChange(new EnvioRecibido(idPaquete, nombrePaquete,descripcionPaquete,entrega )).apply();
 

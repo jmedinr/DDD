@@ -1,24 +1,16 @@
 package co.com.sofkau.entrenamiento.curso.clientes.factory;
 
-import co.com.sofkau.entrenamiento.curso.clientes.Clientes;
 
+import co.com.sofkau.entrenamiento.curso.clientes.Persona;
 import java.util.HashSet;
 import java.util.Set;
 
 public class ClientesFactory {
 
-    public Set<Clientes> getClientes() {
-        return clientes;
-    }
+    private static final Set<Persona> personas = new HashSet<>();
 
-    private static final Set<Clientes> clientes = new HashSet<>();
-
-    public ClientesFactory() {
-    }
-
-    public  ClientesFactory agregarCliente(Clientes cliente) {
-        clientes.add(cliente);
-        return this;
+    public Set<Persona> personas() {
+        return personas;
     }
 
     public static ClientesFactory builder() {

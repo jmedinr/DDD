@@ -1,2 +1,4 @@
-package PACKAGE_NAME;public class PaqueteEventChange {
+package co.com.sofkau.entrenamiento.curso.paquete;
+
+public class PaqueteEventChange {
 }
