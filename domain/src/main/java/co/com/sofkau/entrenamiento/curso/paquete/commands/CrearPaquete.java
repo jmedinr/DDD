@@ -1,2 +1,4 @@
-package co.com.sofkau.entrenamiento.curso.paquete.commands;public class CrearPaquete {
+package co.com.sofkau.entrenamiento.curso.paquete.commands;
+
+public class CrearPaquete {
 }

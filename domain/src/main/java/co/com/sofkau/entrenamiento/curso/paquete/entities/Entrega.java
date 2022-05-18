@@ -1,20 +1,23 @@
-package entities;
+package co.com.sofkau.entrenamiento.curso.paquete.entities;
 
-
-import Identities.EntregaID;
 import co.com.sofka.domain.generic.Entity;
+import co.com.sofkau.entrenamiento.curso.paquete.identities.EntregaID;
+import co.com.sofkau.entrenamiento.curso.paquete.values.Peso;
+import co.com.sofkau.entrenamiento.curso.paquete.values.TipoEntrega;
+import co.com.sofkau.entrenamiento.curso.paquete.values.ValorAsegurado;
 
 
-public class IEntrega  extends Entity<EntregaID> {
+public class Entrega  extends Entity<EntregaID> {
 
-    protected Values.TipoEntrega tipoEntrega;
-    protected Values.Peso peso;
-    protected Values.ValorAsegurado valorAsegurado;
-    public IEntrega(EntregaID entityId) {
+    protected TipoEntrega tipoEntrega;
+    protected Peso peso;
+    protected ValorAsegurado valorAsegurado;
+
+    public Entrega(EntregaID entityId) {
         super(entityId);
     }
 
-    public Values.TipoEntrega getTipoEntrega() {
+    public TipoEntrega getTipoEntrega() {
         return tipoEntrega;
     }
 

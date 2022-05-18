@@ -1,11 +1,11 @@
-package entities;
+package co.com.sofkau.entrenamiento.curso.paquete.entities;
 
 import Identities.MensajeroID;
 import co.com.sofka.domain.generic.Entity;
 import Values.Nombre;
 import Values.Telefono;
 
-public class EMensajero extends Entity<MensajeroID> {
+public class Mensajero extends Entity<MensajeroID> {
 
 
     public EMensajero(MensajeroID entityId) {
