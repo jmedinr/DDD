@@ -15,7 +15,15 @@ import co.com.sofkau.entrenamiento.curso.paquete.identities.PaqueteID;
 
 import java.util.List;
 import java.util.Map;
-
+/**
+ * Agregado ROOT Clientes
+ * Se hacen metodos   principales del agregado para comunicacion con  sus entidades
+ *
+ * @Version 1.0
+ * @Author Jhon Stiven Granada Acevedo
+ * @Email ticen17.jsga@gmail.com
+ * *
+ */
 public class Clientes extends AggregateEvent<ClienteId> {
     protected EnviosId enviosId;
     protected boolean destinatarioAgregado;

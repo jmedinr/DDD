@@ -6,7 +6,14 @@ import co.com.sofkau.entrenamiento.curso.clientes.events.DestinatarioAgregado;
 import co.com.sofkau.entrenamiento.curso.clientes.events.RemitenteAgregado;
 
 import java.util.HashMap;
+/**
+ * Event ClienteEventChange
 
+ * @Version 1.0
+ * @Author Jhon Stiven Granada Acevedo
+ * @Email ticen17.jsga@gmail.com
+ * *
+ */
 public class ClienteEventChange extends EventChange {
     public ClienteEventChange(Clientes clientes) {
         apply((ClienteCreado event) -> {
